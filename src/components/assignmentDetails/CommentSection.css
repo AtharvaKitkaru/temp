@@ -1,0 +1,22 @@
+
+.form-control{
+  width:50%;
+  font-size: 1em;
+  border:none;
+  border-bottom:0.02em solid rgb(161, 160, 160);
+}
+ 
+
+.form-control:focus{
+  width:100%;
+  border-bottom: 0.07em solid rgb(110, 110, 110) ;
+  transition: 450ms ease-in-out;
+}  
+
+@media screen and (max-width: 550px){
+  .form-control{
+    font-size:0.7em;
+    width:100%;
+  }
+
+}

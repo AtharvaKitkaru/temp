@@ -1,0 +1,25 @@
+#assignment-details {
+  button:not(#upload-files-button) {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    &:hover:not(#upload-files-button) {
+      background-color: salmon;
+      color: white;
+    }
+  }
+}
+
+#upload-files-button {
+  outline: none;
+  box-shadow: none;
+  background: white;
+  color: rgb(183, 32, 46);
+  border: none;
+  //   border: 0.2em solid rgb(183, 32, 46);
+  border-radius: 40em;
+  &:hover {
+    background: rgb(255, 250, 250);
+    border-color: maroon;
+  }
+}

@@ -17,6 +17,11 @@ class ProjectRegistration extends Component {
       [e.target.name]: e.target.value
     });
   };
+
+  inputFile = () =>{
+    document.getElementById('referenceFiles').click();
+    
+  }
   handleSubmit = e => {
     e.preventDefault();
     localStorage.setItem("projectRegistrationFormData", JSON.stringify(this.state));
@@ -160,28 +165,10 @@ class ProjectRegistration extends Component {
                 alignItems: "center"
               }}
             >
-              <FormGroup className="col-12 col-md-12">
-                <Label for="exampleFile">
-                  <Button
-                    className="btn"
-                    style={{
-                      backgroundColor: "rgb(183, 32, 46)",
-                      color: "white",
-                      outline: "none",
-                      boxShadow: "none"
-                    }}
-                  >
-                    {" "}
-                    Attach documents (if any)
-                  </Button>
-                </Label>
-                <Input
-                  type="file"
-                  name="file"
-                  id="exampleFile"
-                  className="d-none"
-                />
-              </FormGroup>
+              <div style = {{height:"0px",width:"0px",overflow:"hidden"}}>
+                <Input type="file" name="file" id="referenceFiles" />
+              </div>
+              <Button style={{backgroundColor: "rgb(183, 32, 46)",color: "white",outline: "none",boxShadow: "none"}} type="button"onClick = {this.inputFile}> Attach Files ( if any)</Button>
             </div>
             <br />
             <div style={{display: "flex",justifyContent: "center",alignItems: "center"}} className = "row mx-auto">
